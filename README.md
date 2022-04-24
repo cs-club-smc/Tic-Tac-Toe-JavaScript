@@ -9,3 +9,5 @@ SMC CS Club Tic Tac Toe game written in JavaScript!
 
 wow this is a cool new feature I am working on!
 newline
+
+James: figuring out how to do this.
