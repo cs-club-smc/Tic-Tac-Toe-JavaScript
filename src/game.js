@@ -1,3 +1,16 @@
+//Tic Tac Toe Club Project
+
+let tictactoeboard = 
+[
+    ['','',''],
+    ['','',''],
+    ['','','']
+];
+
+
+
+
+
 function setup()
 {
     createCanvas(400, 400);
