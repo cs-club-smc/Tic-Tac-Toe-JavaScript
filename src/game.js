@@ -12,11 +12,14 @@ let MAX_WIDTH = 400;
 
 function createGrid()
 {
-    // use line() to draw
-    // use relationships 
-    // divide height by 3 to place lines
-    // divide width by 3 to place lines
-    // divide each of those positions by 2 (1/6 of the height/width) to get the center of box
+    let height_third = Math.floor(MAX_HEIGHT/3);
+    let width_third = Math.floor(MAX_WIDTH/3);
+    // height lines
+    line(0, height_third, MAX_WIDTH, height_third);
+    line(0, 2*height_third, MAX_WIDTH, 2*height_third);
+    // width lines
+    line(width_third, 0, width_third, MAX_HEIGHT);
+    line(2*width_third, 0, 2*width_third, MAX_HEIGHT);
     
 }
 
@@ -28,4 +31,6 @@ function setup()
 function draw()
 {
     background(200);
+    createGrid();
+    
 }
