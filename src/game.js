@@ -3,6 +3,12 @@
 const MAX_HEIGHT = 400;
 const MAX_WIDTH = 400;
 
+/**
+ * @param {p5.Vector} vector - a vector representing a center point
+ * This class represents each box of the tictactoe board.
+ * - center is the center coordinate 
+ * - state should either  be an X or an O or blank if not in play yet
+ */
 class Box {
     constructor(vector) {
         this.center = vector;
@@ -10,6 +16,10 @@ class Box {
     }
 }
 
+/**
+ * Creates the tictactoe grid.
+ * @returns {Array[Array[Box]]} Grid
+ */
 function createGrid()
 {
     const height_third = MAX_HEIGHT/3;
