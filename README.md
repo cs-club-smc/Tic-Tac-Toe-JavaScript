@@ -12,8 +12,3 @@ SMC CS Club Tic Tac Toe game written in JavaScript!
 wow this is a cool new feature I am working on!
 newline
 
-int main()
-{
-    cout <<"Hello World">>;
-}
-
