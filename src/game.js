@@ -1,5 +1,4 @@
 //Tic Tac Toe Club Project
-
 const MAX_HEIGHT = 400;
 const MAX_WIDTH = 400;
 
@@ -31,11 +30,14 @@ function createGrid()
     line(width_third, 0, width_third, MAX_HEIGHT);
     line(2*width_third, 0, 2*width_third, MAX_HEIGHT);
 
+    // Create our box objects, starting stateless
     const boxes = [
         [new Box(createVector(width_third/2, height_third/2)), new Box(createVector(MAX_WIDTH/2, height_third/2)), new Box(createVector(5*MAX_WIDTH/6, height_third/2))],
         [new Box(createVector(width_third/2, MAX_HEIGHT/2)), new Box(createVector(MAX_WIDTH/2, MAX_HEIGHT/2)), new Box(createVector(5*MAX_WIDTH/6, MAX_HEIGHT/2))],
         [new Box(createVector(width_third/2, 5*MAX_HEIGHT/6)), new Box(createVector(MAX_WIDTH/2, 5*MAX_HEIGHT/6)), new Box(createVector(5*MAX_WIDTH/6, 5*MAX_HEIGHT/6))]
     ]
+
+    // to be deleted later: but for now, set a point 10 pixels wide in diameter
     push();
     strokeWeight(10);
     for (let i = 0; i < 3; i++)
@@ -50,13 +52,29 @@ function createGrid()
     
 }
 
+/**
+ * Function that runs on the start up of our session
+ */
 function setup()
 {
     createCanvas(MAX_HEIGHT, MAX_WIDTH);
 }
 
+/**
+ * Function that runs continously to draw on our canvas.
+ */
 function draw()
 {
     background(200);
     const ticTacToeBoard = createGrid(); // a 2d array of the Box class
 }
+
+/* TODO:
+Frontend:
+- have squares be buttons
+- show Xs or Os on squares (this is already set up to be reflected as a state in a class)
+
+Backend:
+- logic of the game
+- the computer player
+*/
